@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{Title}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	
+	<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="wms.js"></script>
+	<script src="MultiLan.json"></script>
+	<script>
+		/*$().ready(function(){
+			fillMenu(data, "ZH");
+			
+		});*/
+		
+	</script>
+</head>
+
+<body>
+<!-- 主界面 -->
+<div data-role="page" id="WarehousePage">
+	<div data-role="header"  data-position="fixed">
+		<a href="#Popup4Searching" data-rel="popup" class="ui-btn ui-btn-left ui-icon-search ui-btn-icon-left">{Search}</a>
+		<h1>{Title}</h1>
+		<a href="#Popup4Notification" data-rel="popup" class="ui-btn ui-btn-right ui-icon-bullets ui-btn-icon-left">{Notification}</a>
+	</div>
+
+	<div data-role="popup" id="Popup4Searching">
+		<input id="ItemFilter" data-type="search" placeholder="{SearchPlaceHolder}">
+	</div>
+	<div data-role="popup" id="Popup4Notification">
+		<ul data-role="listview" data-inset="true">
+			<li data-icon="false"><a href="#">{NoNotification}</a></li>
+		</ul>
+	</div>
+	<div data-role="main" class="ui-content">
+		<ul data-role="listview" data-filter="true" data-input="#myFilter">
+			<li data-role="list-divider">{Ingredients}</li>
+			<li data-filtertext="{filter}">
+				<a href="#">{name}<span class="ui-li-count">{count}&nbsp; {unit}</span></a><a href="#" data-icon="plus">plus1</a>
+			</li>
+			<li data-role="list-divider">{Drink}</li>
+			<li data-role="list-divider">{Snacks}</li>
+			<li data-role="list-divider">{Fruits}</li>
+			<li data-role="list-divider">{Dressing}</li>
+			<li data-role="list-divider">{Supplies}</li>
+			<li data-role="list-divider">{Medicines}</li>
+		</ul>
+	</div>
+
+	<div data-role="footer"  data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" class="ui-btn-active  ui-state-persist" data-icon="plus">{Add}</a></li>
+				<li><a href="#HistoryPage" data-icon="clock">{History}</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+	
+<!-- 历史界面 -->
+<div data-role="page" id="HistoryPage">
+	<div data-role="header"  data-position="fixed">
+		<a href="#Popup4SearchHistory" data-rel="popup" class="ui-btn ui-btn-left ui-icon-search ui-btn-icon-left">{Search}</a>
+		<h1>{Title}</h1>
+		<a href="#Panel4Setting" class="ui-btn ui-btn-right ui-icon-gear ui-btn-icon-left">{Setting}</a>
+	</div>
+
+	<div data-role="popup" id="Popup4SearchHistory">
+		<input id="HistoryFilter" data-type="search" placeholder="{SearchPlaceHolder}">
+	</div>
+	<div data-role="panel" id="Panel4Setting" data-position="right">
+		<h2>{GeneralSetting}</h2>
+		<p>{Theme}</p>
+		<div data-role="controlgroup" data-type="horizontal">
+		<a href="#" class="ui-btn ui-btn-active">{ThemeWhite}</a>
+		<a href="#" class="ui-btn">{ThemeBlack}</a>
+		<a href="#" class="ui-btn">{ThemeAuto}</a></div>
+		<p>{Language}</p>
+		<div data-role="controlgroup" data-type="horizontal">
+		<a href="#" class="ui-btn ui-btn-active">{ZH}</a>
+		<a href="#" class="ui-btn">{EN}</a>
+		<a href="#" class="ui-btn">{JP}</a>
+    	</div>
+		<h2>{ClassificSetting}</h2>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<ul data-role="listview" data-filter="true" data-input="#myFilter">
+			<li data-filtertext="{filter}" data-icon="false"><a href="#">
+				<img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.Lse-n4BcPdTJE8H7zeVkBQHaJ4?w=185&h=247&c=7&r=0&o=5&pid=1.7" alt="{AvatarName}" class="ui-li-icon">{HistoryContent}</a></li>
+		</ul>
+	</div>
+
+	<div data-role="footer"  data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#WarehousePage" data-icon="grid">{Warehouse}</a></li>
+				<li><a href="#" class="ui-btn-active  ui-state-persist" data-icon="clock">{History}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

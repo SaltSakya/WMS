@@ -1,0 +1,40 @@
+// JSON Document
+data = {
+	"ZH":{
+		"Title": "仓库管理系统",
+		"Search": "搜索",
+		"Notification": "通知",
+		"NoNotification": "暂无通知",
+		"Ingredients": "食材",
+		"Drink": "饮品",
+		"Snacks": "零食",
+		"Fruits": "水果",
+		"Dressing": "调料",
+		"Supplies": "日用品",
+		"Medicines": "药品",
+		"Add": "添加",
+		"History": "历史",
+		"Setting": "设置",
+		"GeneralSetting": "常规设置",
+		"Theme": "主题",
+		"ThemeWhite": "明亮",
+		"ThemeBlack": "暗黑",
+		"ThemeAuto": "自动",
+		"Language": "语言",
+		"ZH": "汉",
+		"EN": "英",
+		"JP": "日",
+		"ClassificSetting": "分类设置",
+		"": "",
+		"": "",
+		"HistoryContent": "{ab}{add/remove}了{count}{unit}{sth}。",
+		"": "",
+		"Warehouse": "库存",
+	},
+	"EN":{
+		
+	},
+	"JP":{
+		
+	}
+}
