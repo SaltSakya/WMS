@@ -16,7 +16,6 @@ function fillMenu(data, lan){
 		var rep = new RegExp("{"+markname+"}",'g');
 		innerhtml = innerhtml.replace(rep, data[lan][markname]);
 	}
-	alert(innerhtml);
 	$('body').html(innerhtml);
 }
 function checkStocks(){}
